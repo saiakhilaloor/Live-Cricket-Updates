@@ -1,5 +1,5 @@
 # Live-Cricket-Updates
-Desktop notifications for Live cricket scores
+Desktop notifications for Live cricket scores after every 2 minutes
 
 # Instructions:
 1.Install python on your system.</br>
@@ -9,4 +9,4 @@ Desktop notifications for Live cricket scores
 * BeautifulSoup4</br>
 * gi.repository </br>
 * requests</br>
-  
+ 
