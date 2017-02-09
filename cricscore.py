@@ -3,9 +3,9 @@ import requests,time
 from bs4 import BeautifulSoup
 url='http://www.espncricinfo.com/ci/engine/match/index.html?view=live'
 url2='http://www.espncricinfo.com/india-v-bangladesh-2016-17/engine/match/1041761.html'
-web=requests.get(url)
-web2=requests.get(url2)
 while True:
+	web=requests.get(url)
+	web2=requests.get(url2)
 	bs=BeautifulSoup(web.content,'html.parser')
 	bs2=BeautifulSoup(web2.content,'html.parser')
 	inn1=bs.find_all('div',{'class':'innings-info-1'})[0].text
