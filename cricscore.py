@@ -1,4 +1,4 @@
-from gi.repository import Notify
+import subprocess
 import requests,time
 from bs4 import BeautifulSoup
 url='http://www.espncricinfo.com/ci/engine/match/index.html?view=live'
@@ -10,7 +10,5 @@ while True:
 	status=bs.find_all('div',{'class':'match-status'})[0].text
 	info = inn1+inn2+status
 	match='Live Score'
-	Notify.init('Cricket Updates')
-	notification=Notify.Notification.new(match,info)
-	notification.show()
+	subprocess.Popen(['notify-send',match,info])
 	time.sleep(120)
